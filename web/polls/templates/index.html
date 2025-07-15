@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Documents</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  </head>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+
+    nav,
+    .btn,
+    .navbar {
+      background-color: maroon;
+      border: maroon;
+      color: white;
+    }
+
+    .nav-link {
+      color: white;
+    }
+
+    .nav-link.active {
+      background-color: white;
+      color: maroon;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+
+    .nav-link:hover {
+      color: rgb(160, 160, 160);
+      border-left: 4px solid rgb(160, 160, 160);
+      padding-left: 12px;
+      font-weight: bold;
+    }
+
+    .btn {
+      background-color: maroon;
+    }
+
+    table.dataTable {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      font-family: "Poppins", sans-serif;
+      font-size: 14px;
+    }
+
+    table.dataTable thead {
+      background-color: #800000; /* maroon */
+      color: white;
+    }
+
+    table.dataTable thead th {
+      background-color: #800000;
+      color: white;
+    }
+
+    .dataTables_scrollHead {
+      padding-top: 5px;
+    }
+
+    /* #data-table {
+      display: none;
+    } */
+  </style>
+  <body>
+    <div class="container-fluid">
+      <div class="row vh-100">
+        <!-- Side Bar -->
+        <nav class="col-md-3 col-lg-2 d-md-block sidebar collapse border-end border-3">
+          <ul class="nav flex-column">
+            <li class="nav-item mt-2">
+              <a class="nav-link" aria-current="page" href="{% url 'index' %}">
+                <h3>Dyandra AI</h3>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Email Validation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="{% url 'readfile_to_n8n' %}">PDF Summarizer</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="col-10 px-0">
+          <nav class="navbar custom-navbar mb-4 py-3">
+            <div class="container-fluid d-flex justify-content-end align-items-center">
+              <div class="dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" class="bi bi-person-circle" viewBox="0 0 16 16">
+                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                  <path
+                    fill-rule="evenodd"
+                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 
+            11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                </svg>
+                <a class="btn text-decoration-none text-white fw-semibold fs-5" href="{% url 'index' %}" id="username" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ name }}</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item d-flex justify-content-center" href="{% url 'logout' %}">Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+
+    <script>
+      function enableUploadButton() {
+        const fileInput = document.getElementById("formFile");
+        const uploadBtn = document.getElementById("uploadBtn");
+
+        if (fileInput.files.length > 0) {
+          uploadBtn.disabled = false;
+        } else {
+          uploadBtn.disabled = true;
+        }
+      }
+
+      function showLoading() {
+        document.getElementById("loadingOverlay").style.display = "block";
+      }
+
+      function hideLoading() {
+        document.getElementById("loadingOverlay").style.display = "none";
+      }
+
+      // var tableData = JSON.parse("{{ data|escapejs }}");
+
+      // if (tableData.length > 0) {
+      //   showLoading();
+      // }
+
+      // $(document).ready(function () {
+      //   var table = $("#data-table").DataTable({
+      //     scrollCollapse: true,
+      //     scrollY: "70vh",
+      //     scrollX: true,
+      //     autoWidth: false,
+      //     // data: tableData,
+      //     columns: [
+      //       {% for column in columns %}
+      //         { data: '{{ column }}', width: '150px'}{% if not forloop.last %},{% endif %}
+      //       {% endfor %}
+      //     ],
+      //     processing: true,
+      //     // initComplete: function () {
+      //     //   // hideLoading();
+      //     //   $("#data-table").css("display", "table");
+      //     // }
+      //   });
+
+      // Event listener for processing state
+      // table.on("processing", function (e, settings, processing) {
+      //   if (processing) {
+      //     showLoading();
+      //   } else {
+      //     hideLoading();
+      //   }
+      // });
+      // });
+      const file_name = document.getElementById("file_name").value;
+      console.log($("#file_name").val());
+      if (file_name) {
+        const url = "/json_data/temporary/" + encodeURIComponent(file_name) + "/";
+        $.ajax({
+          url: url,
+          type: "GET",
+          dataType: "json",
+          beforeSend: function () {
+            // Tampilkan loading spinner
+            $("#loadingOverlay").show();
+          },
+          success: function (response) {
+            let thead_html = "<tr>";
+            response.columns.forEach(function (col) {
+              thead_html += `<th>${col}</th>`;
+            });
+            thead_html += "</tr>";
+            $("#data-table thead").html(thead_html);
+            // response punya: response.file_name, response.data, response.columns
+            var columns = response.columns.map(function (col) {
+              return { data: col, width: "150px" };
+            });
+
+            // inisialisasi DataTable dengan data sebenarnya
+            $("#data-table").DataTable({
+              scrollCollapse: true,
+              scrollY: "70vh",
+              scrollX: true,
+              autoWidth: false,
+              columns: columns,
+              paging: true,
+              info: true,
+              processing: true,
+              data: response.data,
+              initComplete: function () {
+                hideLoading();
+              },
+            });
+          },
+          error: function (err) {
+            console.error("Error fetching data", err);
+          },
+        });
+      } else {
+        console.warn("File name is empty. No AJAX request made.");
+      }
+    </script>
+  </body>
+</html>

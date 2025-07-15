@@ -1,0 +1,31 @@
+[INFO] 2025-07-14 13:41:50 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-07-14 13:44:35 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-07-14 13:45:44 django.utils.autoreload: /Users/egasrilestari/pdf-ai/web/mysite/urls.py changed, reloading.
+[INFO] 2025-07-14 13:45:44 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-07-14 13:46:10 django.utils.autoreload: /Users/egasrilestari/pdf-ai/web/polls/urls.py changed, reloading.
+[INFO] 2025-07-14 13:46:10 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-07-14 13:47:20 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-07-14 13:48:03 django.utils.autoreload: /Users/egasrilestari/pdf-ai/web/polls/views.py changed, reloading.
+[INFO] 2025-07-14 13:48:03 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-07-14 13:48:34 django.utils.autoreload: /Users/egasrilestari/pdf-ai/web/mysite/settings.py changed, reloading.
+[INFO] 2025-07-14 13:48:35 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-07-14 13:50:16 django.utils.autoreload: /Users/egasrilestari/pdf-ai/web/polls/urls.py changed, reloading.
+[INFO] 2025-07-14 13:50:16 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-07-14 13:51:06 django.utils.autoreload: /Users/egasrilestari/pdf-ai/web/polls/views.py changed, reloading.
+[INFO] 2025-07-14 13:51:06 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-07-14 13:52:28 django.utils.autoreload: /Users/egasrilestari/pdf-ai/web/polls/urls.py changed, reloading.
+[INFO] 2025-07-14 13:52:29 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-07-14 13:54:34 django.utils.autoreload: /Users/egasrilestari/pdf-ai/web/polls/models.py changed, reloading.
+[INFO] 2025-07-14 13:54:34 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-07-14 14:00:47 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-07-14 14:07:45 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-07-14 14:11:57 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-07-14 14:13:19 django.utils.autoreload: /Users/egasrilestari/pdf-ai/web/mysite/settings.py changed, reloading.
+[INFO] 2025-07-14 14:13:19 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-07-14 14:15:41 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-07-14 14:19:48 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-07-14 14:24:00 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-07-14 14:24:42 django.utils.autoreload: /Users/egasrilestari/pdf-ai/web/polls/views.py changed, reloading.
+[INFO] 2025-07-14 14:24:42 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-07-14 14:26:02 django.utils.autoreload: /Users/egasrilestari/pdf-ai/web/mysite/settings.py changed, reloading.
+[INFO] 2025-07-14 14:26:02 django.utils.autoreload: Watching for file changes with StatReloader
