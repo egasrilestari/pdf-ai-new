@@ -144,7 +144,7 @@ DATABASES = {
         "NAME": "dev_dytiket",
         "USER": "dev_dytiket",
         "PASSWORD": "dev_dytiket",
-        "HOST": "db-prs.ctygcefk5lty.ap-southeast-3.rds.amazonaws.com1",
+        "HOST": "db-prs.ctygcefk5lty.ap-southeast-3.rds.amazonaws.com",
         "PORT": "7777",
     }
 }
