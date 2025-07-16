@@ -130,24 +130,24 @@ WSGI_APPLICATION = "mysite.wsgi.application"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 # default django database
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.sqlite3",
-#         "NAME": BASE_DIR / "db.sqlite3",
-#     }
-# }
-
-# dev (alpha database)
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": "dev_dytiket",
-        "USER": "dev_dytiket",
-        "PASSWORD": "dev_dytiket",
-        "HOST": "db-prs.ctygcefk5lty.ap-southeast-3.rds.amazonaws.com",
-        "PORT": "7777",
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
+
+# dev (alpha database)
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.mysql",
+#         "NAME": "dev_dytiket",
+#         "USER": "dev_dytiket",
+#         "PASSWORD": "dev_dytiket",
+#         "HOST": "db-prs.ctygcefk5lty.ap-southeast-3.rds.amazonaws.com",
+#         "PORT": "7777",
+#     }
+# }
 # local database
 # DATABASES = {
 #     "default": {

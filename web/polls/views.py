@@ -50,6 +50,44 @@ def index(request):
     return render(request, "index.html", context)
 
 
+# login pake db
+# def login(request):
+#     context = {}
+#     try:
+#         if request.method == "POST":
+#             email = request.POST.get("email")
+#             password = request.POST.get("password")
+
+#             user = Users.objects.filter(email=email).first()
+
+#             if not user:
+#                 context["error"] = "Email tidak ditemukan"
+#                 logger.error("Email tidak ditemukan")
+#             else:
+#                 hashed = user.password.encode("utf-8")  # ambil hash dari db
+#                 password_bytes = password.encode("utf-8")  # password input user
+
+#                 if bcrypt.checkpw(password_bytes, hashed):
+#                     # simpen name di session
+#                     request.session["user_name"] = user.name
+#                     request.session["user_id"] = user.id
+#                     request.session["user_email"] = user.email
+#                     request.session["user_type"] = user.type
+#                     # Password benar
+#                     logger.debug("Success login")
+#                     return redirect("readfile_to_n8n")
+#                 else:
+#                     context["error"] = "Password salah"
+#                     logger.error("Password salah")
+#     except Exception as e:
+#         print("Error login function:", e)
+#         context["error"] = "Terjadi kesalahan saat login"
+#         logger.error("Terjadi kesalahan saat login")
+
+#     return render(request, "login.html", context)
+
+
+# login function with hardcoded email and password
 def login(request):
     context = {}
     try:
@@ -57,27 +95,22 @@ def login(request):
             email = request.POST.get("email")
             password = request.POST.get("password")
 
-            user = Users.objects.filter(email=email).first()
-
-            if not user:
-                context["error"] = "Email tidak ditemukan"
-                logger.error("Email tidak ditemukan")
+            # Hardcoded email dan password
+            if email != "egasrilestari27@gmail.com":
+                context["error"] = "Email tidak diizinkan"
+                logger.error("Email tidak diizinkan")
+            elif password != "12345":
+                context["error"] = "Password salah"
+                logger.error("Password salah")
             else:
-                hashed = user.password.encode("utf-8")  # ambil hash dari db
-                password_bytes = password.encode("utf-8")  # password input user
+                # Simpan data user secara manual ke session
+                request.session["user_name"] = "Ega Sri Lestari"
+                request.session["user_id"] = 1
+                request.session["user_email"] = email
+                request.session["user_type"] = "admin"
 
-                if bcrypt.checkpw(password_bytes, hashed):
-                    # simpen name di session
-                    request.session["user_name"] = user.name
-                    request.session["user_id"] = user.id
-                    request.session["user_email"] = user.email
-                    request.session["user_type"] = user.type
-                    # Password benar
-                    logger.debug("Success login")
-                    return redirect("readfile_to_n8n")
-                else:
-                    context["error"] = "Password salah"
-                    logger.error("Password salah")
+                logger.debug("Login berhasil")
+                return redirect("readfile_to_n8n")
     except Exception as e:
         print("Error login function:", e)
         context["error"] = "Terjadi kesalahan saat login"
