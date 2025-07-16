@@ -37,6 +37,11 @@ DEBUG = True
 ALLOWED_HOSTS = ["web-production-6d1a2.up.railway.app"]
 LOGGING = LOGGING
 
+# kalau pakai custom domain nanti, tambahkan domain itu juga.
+CSRF_TRUSTED_ORIGINS = [
+    "https://web-production-6d1a2.up.railway.app",
+]
+
 # Django log viewer
 LOG_VIEWER_FILES_DIR = "logs"
 LOG_VIEWER_PAGE_LENGTH = 25
