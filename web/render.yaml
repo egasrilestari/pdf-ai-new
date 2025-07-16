@@ -2,9 +2,9 @@ services:
   - type: web
     name: pdf-ai-django
     env: python
-    buildCommand: "./manage.py collectstatic --noinput"
-    startCommand: "gunicorn mysite.wsgi:application"
     plan: free
+    buildCommand: "cd web && python manage.py collectstatic --noinput"
+    startCommand: "cd web && gunicorn mysite.wsgi:application"
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: mysite.settings
