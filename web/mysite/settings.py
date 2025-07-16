@@ -123,32 +123,32 @@ WSGI_APPLICATION = "mysite.wsgi.application"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 # local database
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": "tiket-local",
-        "USER": "root",
-        "PASSWORD": "",
-        "HOST": "127.0.0.1",
-        "PORT": "3306",
-    },
-    "ifra": {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": "ifra_local",
-        "USER": "root",
-        "PASSWORD": "",
-        "HOST": "127.0.0.1",
-        "PORT": "3306",
-    },
-    "ipa": {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": "ipa_25_local",
-        "USER": "root",
-        "PASSWORD": "",
-        "HOST": "127.0.0.1",
-        "PORT": "3306",
-    },
-}
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.mysql",
+#         "NAME": "tiket-local",
+#         "USER": "root",
+#         "PASSWORD": "",
+#         "HOST": "127.0.0.1",
+#         "PORT": "3306",
+#     },
+#     "ifra": {
+#         "ENGINE": "django.db.backends.mysql",
+#         "NAME": "ifra_local",
+#         "USER": "root",
+#         "PASSWORD": "",
+#         "HOST": "127.0.0.1",
+#         "PORT": "3306",
+#     },
+#     "ipa": {
+#         "ENGINE": "django.db.backends.mysql",
+#         "NAME": "ipa_25_local",
+#         "USER": "root",
+#         "PASSWORD": "",
+#         "HOST": "127.0.0.1",
+#         "PORT": "3306",
+#     },
+# }
 
 
 # Password validation
