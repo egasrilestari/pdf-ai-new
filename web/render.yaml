@@ -4,6 +4,7 @@ services:
     env: python
     buildCommand: "./manage.py collectstatic --noinput"
     startCommand: "gunicorn mysite.wsgi:application"
+    plan: free
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: mysite.settings
