@@ -450,3 +450,25 @@ Traceback (most recent call last):
   File "/Users/egasrilestari/pdf-ai/.venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
     raise NoReverseMatch(msg)
 django.urls.exceptions.NoReverseMatch: Reverse for 'image_gen' not found. 'image_gen' is not a valid view function or pattern name.
+[INFO] 2025-07-16 15:08:22 django.request: The info message
+[WARNING] 2025-07-16 15:08:22 django.request: The warning message
+[ERROR] 2025-07-16 15:08:22 django.request: The error message
+[DEBUG] 2025-07-16 15:08:46 django.request: Success login
+[WARNING] 2025-07-16 15:08:46 django.request: Not Found: /favicon.ico
+[DEBUG] 2025-07-16 16:35:55 django.request: Success login
+[INFO] 2025-07-16 16:36:40 django.request: The info message
+[WARNING] 2025-07-16 16:36:40 django.request: The warning message
+[ERROR] 2025-07-16 16:36:40 django.request: The error message
+[DEBUG] 2025-07-16 16:36:56 django.request: Success login
+[DEBUG] 2025-07-16 17:14:59 django.request: Success login
+[INFO] 2025-07-16 17:33:32 django.request: The info message
+[WARNING] 2025-07-16 17:33:32 django.request: The warning message
+[ERROR] 2025-07-16 17:33:32 django.request: The error message
+[DEBUG] 2025-07-16 17:52:05 django.request: Success login
+[INFO] 2025-07-16 17:53:02 django.request: The info message
+[WARNING] 2025-07-16 17:53:02 django.request: The warning message
+[ERROR] 2025-07-16 17:53:02 django.request: The error message
+[INFO] 2025-07-16 17:57:39 django.request: The info message
+[WARNING] 2025-07-16 17:57:39 django.request: The warning message
+[ERROR] 2025-07-16 17:57:39 django.request: The error message
+[WARNING] 2025-07-16 17:59:45 django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json

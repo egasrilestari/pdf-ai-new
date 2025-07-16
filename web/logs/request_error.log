@@ -441,3 +441,8 @@ Traceback (most recent call last):
   File "/Users/egasrilestari/pdf-ai/.venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
     raise NoReverseMatch(msg)
 django.urls.exceptions.NoReverseMatch: Reverse for 'image_gen' not found. 'image_gen' is not a valid view function or pattern name.
+[ERROR] 2025-07-16 15:08:22 django.request: The error message
+[ERROR] 2025-07-16 16:36:40 django.request: The error message
+[ERROR] 2025-07-16 17:33:32 django.request: The error message
+[ERROR] 2025-07-16 17:53:02 django.request: The error message
+[ERROR] 2025-07-16 17:57:39 django.request: The error message

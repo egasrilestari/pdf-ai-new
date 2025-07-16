@@ -74,7 +74,7 @@ def login(request):
                     request.session["user_type"] = user.type
                     # Password benar
                     logger.debug("Success login")
-                    return redirect("index")
+                    return redirect("readfile_to_n8n")
                 else:
                     context["error"] = "Password salah"
                     logger.error("Password salah")
@@ -140,6 +140,20 @@ def readfile_to_n8n(request):
     context["name"] = user_name
 
     file_history = request.session.get("file_history", [])
+
+    # Ambil daftar file PDF dari folder
+    pdf_files = []
+    try:
+        pattern = os.path.join(PDF_DIR, "*.pdf")
+        all_pdf_files = glob.glob(pattern)
+        pdf_files = pdf_files = [
+            os.path.splitext(os.path.basename(f))[0].replace("_", " ")
+            for f in all_pdf_files
+        ]
+    except Exception as e:
+        print("Gagal mengambil daftar file PDF:", e)
+
+    context["pdf_files"] = pdf_files
 
     try:
         if request.method == "POST":
@@ -258,6 +272,7 @@ def readfile_to_n8n(request):
                 # merged_text, merged_docx_name = merge_all_docxs()
                 payload = {"input": user_input}
                 # "merged_docx_text": merged_text or ""
+                # dapat semua file PDF yang ada di folder
 
                 files = {}
                 if merged_pdf_buffer:

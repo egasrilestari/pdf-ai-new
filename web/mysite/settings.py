@@ -31,7 +31,8 @@ DEBUG = True
 # Aktifin 404 page not found
 # DEBUG = False
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+# ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["pdf-ai-django.onrender.com"]
 LOGGING = LOGGING
 
 # Django log viewer

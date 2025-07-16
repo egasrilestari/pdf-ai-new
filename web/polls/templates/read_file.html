@@ -158,13 +158,13 @@
             {% endif %} -->
 
             <div style="height: 100vh; overflow-y: auto">
-              <div class="card shadow-sm" style="max-width: 500px">
+              <div class="card shadow-sm" style="max-width: 750px">
                 <div class="card-body">
-                  <h5 class="card-title">List File:</h5>
+                  <h6 class="card-title">🤖 Hai! Untuk saat ini, saya hanya bisa membaca dan menjawab mengenai topik berikut:</h6>
                   <ul>
-                    <li>are unaffected by this style</li>
-                    <li>will still show a bullet</li>
-                    <li>and have appropriate left margin</li>
+                    {% for file in pdf_files %}
+                    <li>{{ file }}</li>
+                    {% endfor %}
                   </ul>
                 </div>
               </div>
@@ -180,7 +180,7 @@
                   {% if item.file_name %}
                   <strong class="text-primary">📄 {{ item.file_name }}</strong>
                   {% endif %}
-                  <div class="mt-2">{{ item.summary|safe }}</div>
+                  <div>{{ item.summary|safe }}</div>
                 </div>
               </div>
               {% endif %} {% endfor %}

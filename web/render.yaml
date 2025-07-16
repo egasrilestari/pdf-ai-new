@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: pdf-ai-django
+    env: python
+    buildCommand: "./manage.py collectstatic --noinput"
+    startCommand: "gunicorn mysite.wsgi:application"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: mysite.settings
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ALLOWED_HOSTS
+        value: "pdf-ai-django.onrender.com"

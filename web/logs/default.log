@@ -29,3 +29,24 @@
 [INFO] 2025-07-14 14:24:42 django.utils.autoreload: Watching for file changes with StatReloader
 [INFO] 2025-07-14 14:26:02 django.utils.autoreload: /Users/egasrilestari/pdf-ai/web/mysite/settings.py changed, reloading.
 [INFO] 2025-07-14 14:26:02 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-07-16 15:08:21 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-07-16 16:36:38 django.utils.autoreload: /Users/egasrilestari/pdf-ai/web/polls/views.py changed, reloading.
+[INFO] 2025-07-16 16:36:39 django.utils.autoreload: Watching for file changes with StatReloader
+[DEBUG] 2025-07-16 17:15:01 urllib3.connectionpool: Starting new HTTPS connection (1): discrete-quail-monthly.ngrok-free.app:443
+[DEBUG] 2025-07-16 17:15:34 urllib3.connectionpool: https://discrete-quail-monthly.ngrok-free.app:443 "POST /webhook/from-python HTTP/1.1" 200 74
+[DEBUG] 2025-07-16 17:15:58 urllib3.connectionpool: Starting new HTTPS connection (1): discrete-quail-monthly.ngrok-free.app:443
+[DEBUG] 2025-07-16 17:16:05 urllib3.connectionpool: https://discrete-quail-monthly.ngrok-free.app:443 "POST /webhook/from-python HTTP/1.1" 200 319
+[INFO] 2025-07-16 17:33:21 django.utils.autoreload: /Users/egasrilestari/pdf-ai/web/polls/views.py changed, reloading.
+[INFO] 2025-07-16 17:33:22 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-07-16 17:33:31 django.utils.autoreload: /Users/egasrilestari/pdf-ai/web/polls/views.py changed, reloading.
+[INFO] 2025-07-16 17:33:32 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-07-16 17:53:01 django.utils.autoreload: /Users/egasrilestari/pdf-ai/web/polls/views.py changed, reloading.
+[INFO] 2025-07-16 17:53:02 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-07-16 17:57:38 django.utils.autoreload: /Users/egasrilestari/pdf-ai/web/polls/views.py changed, reloading.
+[INFO] 2025-07-16 17:57:38 django.utils.autoreload: Watching for file changes with StatReloader
+[DEBUG] 2025-07-16 17:58:33 urllib3.connectionpool: Starting new HTTPS connection (1): discrete-quail-monthly.ngrok-free.app:443
+[DEBUG] 2025-07-16 17:59:04 urllib3.connectionpool: https://discrete-quail-monthly.ngrok-free.app:443 "POST /webhook/from-python HTTP/1.1" 200 84
+[DEBUG] 2025-07-16 17:59:18 urllib3.connectionpool: Starting new HTTPS connection (1): discrete-quail-monthly.ngrok-free.app:443
+[DEBUG] 2025-07-16 17:59:30 urllib3.connectionpool: https://discrete-quail-monthly.ngrok-free.app:443 "POST /webhook/from-python HTTP/1.1" 200 166
+[DEBUG] 2025-07-16 18:00:08 urllib3.connectionpool: Starting new HTTPS connection (1): discrete-quail-monthly.ngrok-free.app:443
+[DEBUG] 2025-07-16 18:00:17 urllib3.connectionpool: https://discrete-quail-monthly.ngrok-free.app:443 "POST /webhook/from-python HTTP/1.1" 200 166
